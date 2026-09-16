@@ -10,4 +10,6 @@ class student{
 int main(){
     unique_ptr<student>ptr=make_unique<student>();
     ptr->display();
+    unique_ptr<student>ptr1=move(ptr);
+    ptr1->display();
 }
