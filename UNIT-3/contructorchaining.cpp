@@ -23,5 +23,5 @@ class student{
 int main(){
     student s;
     s.display();
-    
+
 }
