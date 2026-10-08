@@ -2,25 +2,26 @@
 using namespace std;
 class person{
     public:
-    string name;
-    
     int age;
-   
-};
-class student : public person{
-    public:
-    int roll_no ;
+    string name;
+
 };
 
-class employee: public student{
+class student{
+    public:
+    int roll_no;
+};
+
+class employee : public student, public person{
     public:
     int id;
     string department;
     int salary;
 };
+
 int main(){
-    employee  e;
-    e.name="SONU";
+    employee e;
+     e.name="SONU";
     e.age=21;
     e.roll_no=188;
     
@@ -35,5 +36,4 @@ int main(){
     cout<<e.id<<endl;
     cout<<e.salary<<endl;
     cout<<e.department<<endl;
-
 }
